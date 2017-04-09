@@ -1,4 +1,4 @@
-package main;
+package omc.test.in.loco;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -6,8 +6,9 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
-import org.apache.commons.io.FileUtils;
-import org.apache.commons.lang3.StringUtils;
+//import org.apache.commons.io.FileUtils;
+
+//import com.sun.xml.internal.ws.util.StringUtils;
 
 public class Run {
 
@@ -32,36 +33,36 @@ public class Run {
 		final StringBuilder stringBuilder = new StringBuilder();				
 		final FileReader fileReader = new FileReader(file);
 		final BufferedReader bufferedReader = new BufferedReader(fileReader);
-		String linhaAnterior = StringUtils.EMPTY;
+		String linhaAnterior = "";
 		
 		do{
 			if(linhaAnterior.contains("<SEGURADO>") || linhaAnterior.contains("<SUSEP>")){ 
 				if(line.contains("&")){
 					if(operator.equalsIgnoreCase("ESCAPE")){						
 						line = line.replace("&", "&amp;");
-						linhaAnterior = StringUtils.EMPTY;
+						linhaAnterior = "";
 						
 					}else if(operator.equalsIgnoreCase("UNESCAPE")){
 						line = line.replace("&amp;", "&");
-					 	linhaAnterior = StringUtils.EMPTY;
+					 	linhaAnterior = "";
 					}	
 				}
 			}		
-			 if (StringUtils.isNotEmpty(line) &&  line.contains("<SEGURADO>")){		        	
-				 	linhaAnterior = line;		     
-		       }else if (StringUtils.isNotEmpty(line) && line.contains("<SUSEP>")){
-		    	   linhaAnterior = line;			
-		    }
-			 if(StringUtils.isNotEmpty(line)){
-				 stringBuilder.append(line).append("\n");
-			 }
+//			 if (StringUtils.isNotEmpty(line) &&  line.contains("<SEGURADO>")){		        	
+//				 	linhaAnterior = line;		     
+//		       }else if (StringUtils.isNotEmpty(line) && line.contains("<SUSEP>")){
+//		    	   linhaAnterior = line;			
+//		    }
+//			 if(StringUtils.isNotEmpty(line)){
+//				 stringBuilder.append(line).append("\n");
+//			 }
 		}
 		
 		 while ((line = bufferedReader.readLine()) != null);		       
 		
 		 fileReader.close();
 		 bufferedReader.close();
-		 FileUtils.writeStringToFile(file, stringBuilder.toString());
+		// FileUtils.writeStringToFile(file, stringBuilder.toString());
 		return file;
 	}
 

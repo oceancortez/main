@@ -1,8 +1,8 @@
-package main;
+package omc.test.in.loco;
 
 import java.util.Arrays;
 
-public class TesteLogica {
+public class TestIcarros {
 
 	/**
 	 * @param args

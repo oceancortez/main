@@ -1,6 +1,6 @@
-package main;
+package omc.test.in.loco;
 
-public class TesteInLoco {
+public class TestInLoco {
 
 	public static void main(String[] args) {
 		
