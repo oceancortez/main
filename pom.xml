@@ -54,28 +54,32 @@
 			<version>3.5.3</version>
 		</dependency>
 
-		<!-- https://mvnrepository.com/artifact/com.google.guava/guava -->
 		<dependency>
 			<groupId>com.google.guava</groupId>
 			<artifactId>guava</artifactId>
-			<version>16.0</version>
+			<version>21.0</version>
 		</dependency>
-
-		<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-support -->
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
-			<artifactId>selenium-support</artifactId>
-			<version>2.53.0</version>
+			<artifactId>selenium-java</artifactId>
+			<version>3.2.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-server</artifactId>
+			<version>3.2.0</version>
 		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/ru.stqa.selenium/webdriver-expected-conditions -->
-<!-- 	
+		<!-- <dependency> <groupId>ru.stqa.selenium</groupId> <artifactId>webdriver-expected-conditions</artifactId> 
+			<version>1.0.41</version> </dependency> -->
+
+		<!-- https://mvnrepository.com/artifact/com.codeborne/phantomjsdriver -->
 		<dependency>
-			<groupId>ru.stqa.selenium</groupId>
-			<artifactId>webdriver-expected-conditions</artifactId>
-			<version>1.0.41</version>
-		</dependency> 
-		-->
+			<groupId>com.codeborne</groupId>
+			<artifactId>phantomjsdriver</artifactId>
+			<version>1.4.1</version>
+		</dependency>
 
 
 
